@@ -1,5 +1,3 @@
-import Tile from './Tile';
-
 export default function TileRow({attempt, emptySquares}) {
 
     // const tiles = attempt.map((letter, index) =>

@@ -1,5 +1,3 @@
-import {useEffect, useState} from 'react';
-
 export default function Key({value, selectKey, removeKey, enterKey, displayKeyboardProgress}) {
     // const [isLoading, setIsLoading] = useState(true)
 

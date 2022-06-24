@@ -10,15 +10,13 @@ export default function Wordle() {
     const [letters, setLetters] = useState([]);
     const [attempts, setAttempts] = useState([]);
     const [emptyRows, setEmptyRows] = useState([]);
-    const [letterDetails, setLetterDetails] = useState({})
     // const [emptySquares, setEmptySquares] = useState([]);  
 
-    const [gameOver, setGameOver] = useState(false);
+    // const [gameOver, setGameOver] = useState(false);
     const [answer, setAnswer] = useState("");
 
     const checkIfWord = () => {
         const url = `${process.env.REACT_APP_DICTIONARY_BASE_URL}${letters.join('')}?key=${process.env.REACT_APP_API_KEY}`;
-        let wordMatch = false;
 
         fetch(url)
         .then(response => response.json())
