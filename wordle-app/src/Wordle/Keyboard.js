@@ -1,6 +1,6 @@
 import Key from "./Key";
 
-export default function Keyboard({selectKey, removeKey, enterKey, displayKeyboardProgress}) {
+export default function Keyboard({selectKey, removeKey, enterKey}) {
     const topRow = ['Q','W','E','R','T','Y','U','I','O','P'];
     const middleRow = ['A','S','D','F','G','H','J','K','L'];
     const bottomRow = ['Ent','Z','X','C','V','B','N','M', 'Del'];
@@ -12,7 +12,6 @@ export default function Keyboard({selectKey, removeKey, enterKey, displayKeyboar
             selectKey = {selectKey}
             removeKey = {removeKey}
             enterKey = {enterKey}
-            displayKeyboardProgress = {displayKeyboardProgress}
         />
     )
 
@@ -23,7 +22,6 @@ export default function Keyboard({selectKey, removeKey, enterKey, displayKeyboar
             selectKey = {selectKey}
             removeKey = {removeKey}
             enterKey = {enterKey}
-            displayKeyboardProgress = {displayKeyboardProgress}
         />
     )
 
@@ -34,7 +32,6 @@ export default function Keyboard({selectKey, removeKey, enterKey, displayKeyboar
             selectKey = {selectKey}
             removeKey = {removeKey}
             enterKey = {enterKey}
-            displayKeyboardProgress = {displayKeyboardProgress}
         />
     )
 

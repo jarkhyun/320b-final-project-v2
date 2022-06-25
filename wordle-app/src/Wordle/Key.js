@@ -1,4 +1,4 @@
-export default function Key({value, selectKey, removeKey, enterKey, displayKeyboardProgress}) {
+export default function Key({value, selectKey, removeKey, enterKey}) {
     
     const nodeArray = document.querySelectorAll(".square");
     let classNames = '';

@@ -50,21 +50,6 @@ export default function Wordle() {
         } 
     }
 
-    const displayKeyboardProgress = (value) => {
-        // let temp; 
-        // for (let i = 0; i < 30; i++) {
-        //     temp = document.querySelectorAll(".square")[i].outerText
-
-        //     // console.log(document.querySelectorAll(".square")[i].outerText, document.querySelectorAll(".square")[i].classList[1])
-            
-        //     if (temp[i] !== ) {
-        //         if (value === temp[i].outerText) {return temp[i].classList[1]};
-        //     } else {
-        //         return '';
-        //     }
-        // }
-    }
-
     const selectKey = (key) => {
         if (letters.length < 5 && attempts.length !== 6) {
             setLetters([...letters, key]);
@@ -157,7 +142,6 @@ export default function Wordle() {
                         selectKey = {selectKey}
                         removeKey = {removeKey}
                         enterKey = {enterKey}
-                        displayKeyboardProgress = {displayKeyboardProgress}
                     />
                 </div>
             </> 

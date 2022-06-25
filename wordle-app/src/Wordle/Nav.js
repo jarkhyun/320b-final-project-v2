@@ -1,32 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
-import firebase from 'firebase/compat/app';
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+// import React, { useEffect, useState } from 'react';
+import React from 'react';
+// import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+// import firebase from 'firebase/compat/app';
+// import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 export default function Nav() {
-    const [user, setUser] = useState(null);
-    const navigate = useNavigate();
-    const auth = getAuth();
+    // const [user, setUser] = useState(null);
+    // const navigate = useNavigate();
+    // const auth = getAuth();
 
-    useEffect(()=> {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
-            if (user) {
-              // User is signed in, see docs for a list of available properties
-              // https://firebase.google.com/docs/reference/js/firebase.User
-              const uid = user.uid;
-              setUser(user);
-              // ...
-            } else {
-              // User is signed out
-              // ...
-            }
-          });
-        // const unsubscribe = firebase.auth().onAuthStateChanged(user => {
-        //     setUser(user);
-        // });
+    // useEffect(()=> {
+    //     const unsubscribe = onAuthStateChanged(auth, (user) => {
+    //         if (user) {
+    //           // User is signed in, see docs for a list of available properties
+    //           // https://firebase.google.com/docs/reference/js/firebase.User
+    //         //   const uid = user.uid;
+    //           setUser(user);
+    //           // ...
+    //         } else {
+    //           // User is signed out
+    //           // ...
+    //         }
+    //       });
+    //     // const unsubscribe = firebase.auth().onAuthStateChanged(user => {
+    //     //     setUser(user);
+    //     // });
 
-        return () => unsubscribe();
-    }, []);
+    //     return () => unsubscribe();
+    // }, [auth]);
     return (
         <div>
             <div className='TitleBar'>
@@ -37,7 +39,7 @@ export default function Nav() {
                 </div>
                 <h1>Wonderful World of Wordle</h1>
                 <div className='SignIn'>
-                    {user ? (
+                    {/* {user ? (
                     <div>
                         <p>{user.displayName}</p>
                         <button
@@ -53,7 +55,7 @@ export default function Nav() {
                     <div>
                         <Link to ="/">Sign In</Link>
                     </div>
-                )}
+                )} */}
                 </div>
             </div>
         </div>
