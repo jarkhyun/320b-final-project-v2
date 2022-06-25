@@ -15,6 +15,7 @@ function App() {
           <Route path="/quordle" element={<Quordle />} />
           <Route path="*" element={<h1>404</h1>} />
       </Routes>
+      <div id="firebaseui-auth-container"></div>
     </div>
   );
 }

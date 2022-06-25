@@ -51,41 +51,18 @@ export default function Wordle() {
     }
 
     const displayKeyboardProgress = (value) => {
-        let checkKeyboard = false;
-        let checkCorrect = false;
-        let checkMixed = false;
-        if (attempts.length !== 0) {
-            for (let i = 0; i < attempts.length ;i++) {
-                for (let j = 0; j < 5; j++) {
-                    if (value === attempts[i][j]) {
-                        checkKeyboard = true;
-                    } 
-                    // for (let k = 0; k < 5; k++) {
-                    //     if (attempts[i][j] === answer[k]) {
-                    //         checkMixed = true;
-                    //     }
-                    // }
-                    // if (attempts[i][j] === answer[j]) {
-                    //     checkCorrect = true;
-                    // }
-                }
-            }
-            if (checkKeyboard && !checkMixed && !checkCorrect) {
-                return ('incorrect'); 
-            // if (checkKeyboard && !checkMixed && !checkCorrect) {
-            //     return ('incorrect'); 
-            // } else if (checkKeyboard && checkMixed && checkCorrect) {
-            //     checkCorrect = false;
-            //     checkMixed = false;
-            //     return ('correct');
-            // } else if (checkKeyboard && checkMixed) {
-            //     checkCorrect = false;
-            //     checkMixed = false;
-            //     return ('mixed');
-            } 
-        } else {
-            return '';
-        }
+        // let temp; 
+        // for (let i = 0; i < 30; i++) {
+        //     temp = document.querySelectorAll(".square")[i].outerText
+
+        //     // console.log(document.querySelectorAll(".square")[i].outerText, document.querySelectorAll(".square")[i].classList[1])
+            
+        //     if (temp[i] !== ) {
+        //         if (value === temp[i].outerText) {return temp[i].classList[1]};
+        //     } else {
+        //         return '';
+        //     }
+        // }
     }
 
     const selectKey = (key) => {
