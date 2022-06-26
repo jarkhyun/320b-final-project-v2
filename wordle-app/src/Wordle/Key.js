@@ -25,7 +25,9 @@ export default function Key({value, selectKey, removeKey, enterKey}) {
                 <><input id={`btn${value}`} className={`big-key `} type="button" value={`Enter`} onClick={() => enterKey()}/></>
             )}
             {value === 'Del' && (
-                <><input id={`btn${value}`} className={`big-key `} type="button" value='&#129056;' onClick={() => removeKey()}/></>
+                <><button id={`btn${value}`} className={`big-key `} onClick={() => removeKey()}>
+                    <i className="gg-backspace"></i>
+                </button></>
             )}
         </div>
     )
