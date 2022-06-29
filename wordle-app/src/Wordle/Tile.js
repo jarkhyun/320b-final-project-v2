@@ -1,8 +1,6 @@
 export default function TileRow({index, letter, array, displayProgress}) {
 
     const classNames = displayProgress(index, letter, array);
-
-    // displayKeyboardProgress(classNames);
     
     return ( 
         <div className={`square ${classNames}`}>

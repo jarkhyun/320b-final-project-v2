@@ -16,6 +16,5 @@ export default function TileRow({attempt, displayProgress}) {
         <div className='row'>
             {tilesRow}
         </div>
-
     )
 }

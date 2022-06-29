@@ -10,7 +10,6 @@ export default function Wordle() {
     const [letters, setLetters] = useState([]);
     const [attempts, setAttempts] = useState([]);
     const [emptyRows, setEmptyRows] = useState([]);
-    // const [emptySquares, setEmptySquares] = useState([]);  
 
     // const [gameOver, setGameOver] = useState(false);
     const [answer, setAnswer] = useState("");
@@ -65,7 +64,7 @@ export default function Wordle() {
     const enterKey = async () => {
         if (letters.length === 5 && attempts.length !== 6 && (/\b[A-Za-z]{5}\b/.test(letters.join('')))) {
             checkIfWord();
-        };                
+        };
     };
 
     useEffect(() => {
@@ -82,9 +81,9 @@ export default function Wordle() {
     useEffect(() => {
         const temp = []; 
         for (let i = 4; i >= attempts.length; i--) {
-            temp.push(['','','','','']);
-            setEmptyRows(temp);    
+            temp.push(['','','','','']);   
         }
+        setEmptyRows(temp); 
     }, [attempts]);
 
     // useEffect(() => {
@@ -98,7 +97,7 @@ export default function Wordle() {
     //console.log(emptyRows)
     // console.log(emptySquares);
     //console.log(letters);
-    // console.log(attempts);
+    console.log(attempts);
     // console.log(answer);
     
     return ( 
