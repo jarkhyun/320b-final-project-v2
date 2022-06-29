@@ -32,12 +32,24 @@ export default function Nav() {
     return (
         <div>
             <div className='TitleBar'>
-                <div className='Nav'>
+                <div className='gg-menu'>
+
+                </div>
+                <div className='info-icon'>
+
+                </div>
+                {/* <div className='Nav'>
                     <div><Link to="/">Home</Link></div>
                     <div><Link to="/wordle">Wordle</Link></div>
-                    {/* <li><Link to="/quordle">Quordle</Link></li> */}
+                    <li><Link to="/quordle">Quordle</Link></li>
+                </div> */}
+                <h1 className='title'>Wonderful World of Wordle</h1>
+                <div className='gg-insights'>
+                    
                 </div>
-                <h1>Wonderful World of Wordle</h1>
+                <div className='gg-options'>
+                    
+                </div>
                 <div className='SignIn'>
                     {/* {user ? (
                     <div>

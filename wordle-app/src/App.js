@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Link, Route, Routes } from 'react-router-dom';
 import Home from './Wordle/Home';
 import Wordle from './Wordle/Wordle';
 import Quordle from './Wordle/Quordle';
@@ -10,12 +10,11 @@ function App() {
     <div className="App">
       <Nav />
       <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/wordle" element={<Wordle />} />
+          <Route path="/" element={<Wordle />} />
+          <Route path="/Sign In" element={<Home />} />
           <Route path="/quordle" element={<Quordle />} />
-          <Route path="*" element={<h1>404</h1>} />
+          <Route path="/*" element={<div><h1>404</h1><Link to="/">Home</Link></div>} />
       </Routes>
-      <div id="firebaseui-auth-container"></div>
     </div>
   );
 }

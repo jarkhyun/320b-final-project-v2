@@ -1,9 +1,13 @@
 .App {
   display: grid;
   /* place-self: center stretch; */
-  /* height: 100vh; */
+  height: 100vh;
   align-items: start;
-  justify-items: center;
+  grid-template-rows: 100px 1fr;
+}
+.title{
+  white-space: nowrap;
+  overflow: hidden;
 }
 .square {
   display: flex;
@@ -23,7 +27,8 @@
 }
 .tiles {
   display: grid;
-  place-items: center;
+  align-content: center;
+  justify-content: center;
   gap: 5px;
 }
 .row {
@@ -33,8 +38,7 @@
 }
 #VirtualKey {
   display: grid;
-  place-items: end center;
-  align-content: end;  
+  place-items: center;
   gap: 5px;
   margin-top: 10px;
   margin-bottom: 20px;
@@ -79,10 +83,11 @@ input {
 }
 .TitleBar {
   border-bottom: 1px solid black;
-  display:flex;
-  flex-flow: row;
+  display: grid;
+  grid-template-columns: 50px 50px 1fr 50px 50px;
   gap: 10px;
-  justify-content: space-between;
+  justify-items: center;
+  align-items: center;
 }
 .Nav {
   display: grid;
@@ -99,8 +104,17 @@ input {
 
 .game {
   display: grid;
-  align-content: space-between;
+  align-content: space-around;
+  height: 100%;
 }
+
+button#btnDel.big-key {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+}
+
+/* opensource css icons @ https://css.gg */
 
 .gg-backspace {
   box-sizing: border-box;
@@ -123,9 +137,9 @@ input {
 }
 .gg-backspace::before {
   background:
-      linear-gradient( to left,
-      currentColor 18px,transparent 0)
-      no-repeat center center/10px 2px;
+    linear-gradient( to left,
+    currentColor 18px,transparent 0)
+    no-repeat center center/10px 2px;
   border-right: 3px solid transparent;
   box-shadow: inset 0 0 0 2px;
   right: 2px;
@@ -146,8 +160,109 @@ input {
   left: -5px
 }
 
-button#btnDel.big-key {
-  display: grid;
-  align-content: center;
-  justify-content: center;
+.gg-menu {
+  transform: scale(var(--ggs,1))
+}
+.gg-menu,
+.gg-menu::after,
+.gg-menu::before {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 20px;
+  height: 2px;
+  border-radius: 3px;
+  background: currentColor
+}
+.gg-menu::after,
+.gg-menu::before {
+  content: "";
+  position: absolute;
+  top: -6px
+}
+.gg-menu::after {
+  top: 6px
+}
+
+.gg-options {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  transform: scale(var(--ggs,1));
+  width: 10px;
+  height: 2px;
+  box-shadow:
+    -3px 4px 0 0,
+    3px -4px 0 0
+}
+.gg-options::after,
+.gg-options::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border: 2px solid;
+  border-radius: 100%
+}
+.gg-options::before {
+  top: -7px;
+  left: -4px
+}
+.gg-options::after {
+  bottom: -7px;
+  right: -4px
+}
+
+.gg-calendar,
+.gg-calendar::before {
+    display: block;
+    box-sizing: border-box
+}
+.gg-calendar {
+  position: relative;
+  transform: scale(var(--ggs,1));
+  width: 18px;
+  height: 18px;
+  border: 2px solid;
+  border-top: 4px solid;
+  border-radius: 3px
+}
+.gg-calendar::before {
+  content: "";
+  position: absolute;
+  width: 10px;
+  border-radius: 3px;
+  left: 2px;
+  background: currentColor;
+  height: 2px;
+  top: 2px
+}
+.gg-insights {
+  box-sizing: border-box;
+  position: relative;
+  display: block;
+  width: 14px;
+  height: 16px;
+  transform: scale(var(--ggs,1));
+  border-left: 8px solid transparent;
+  border-top: 4px solid transparent;
+  box-shadow: inset 0 0 0 2px
+}
+.gg-insights::after,
+.gg-insights::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute;
+  width: 6px;
+  height: 16px;
+  border: 2px solid;
+  right: 4px;
+  bottom: 0
+}
+.gg-insights::before {
+  height: 8px;
+  right: 8px
 }
