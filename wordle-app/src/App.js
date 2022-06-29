@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<Wordle />} />
           <Route path="/Sign In" element={<Home />} />
           <Route path="/quordle" element={<Quordle />} />
-          <Route path="/*" element={<div><h1>404</h1><Link to="/">Home</Link></div>} />
+          <Route path="/*" element={<div className='pageNotFound'><h1>404</h1><Link to="/">Home</Link></div>} />
       </Routes>
     </div>
   );

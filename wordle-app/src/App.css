@@ -107,6 +107,11 @@ input {
   align-content: space-around;
   height: 100%;
 }
+.pageNotFound {
+  display: grid;
+  justify-content: center;
+}
+
 
 button#btnDel.big-key {
   display: grid;
